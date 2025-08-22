@@ -6,8 +6,19 @@
 
 *Due: `<day of week>`, `<month>` `<day>`, `<year>`.*
 
-You can access this assignment with the following link: `classroom.github.com/a/<xxxxxxx>`.
+You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/PA2.3/README.html. You can obtain your personal repository for submission on: `classroom.github.com/a/<xxxxxxx>`.
 
-`<This repository contains source file for the assignment and will be used a source for student repositories and in the workbook. Replace this README with appropriate information describing the file types and how it should be submitted in case of a programming or workshop assignment.>`
+In this assignment you'll make exercises on:
+
+1. [Iterable objects](./1_iter.ipynb)
+2. [Modulo](./2_modulo.ipynb)
+3. [Stem plots](./3_stem_plots.ipynb)
+
+You'll need to have done this to be able to make the workshop and group assignment.
+
+You pass this PA if you:
+- Correct output for task 1.4
+- The notebook for exercise 3 runs without errors
+- Figure from task 3.2 added to this repository
 
 > Copyright 2025 MUDE, Delft University of Technology. This work is licensed under a CC BY 4.0 License

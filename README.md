@@ -21,4 +21,4 @@ You pass this PA if you:
 - The notebook for exercise 3 runs without errors
 - Figure from task 3.2 added to this repository
 
-> Copyright 2025 MUDE, Delft University of Technology. This work is licensed under a CC BY 4.0 License
+> By Robert Lanzafame, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).

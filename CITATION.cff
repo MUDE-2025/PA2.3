@@ -2,15 +2,15 @@ cff-version: 1.2.0
 message: 'If you use this assignment, please cite it using these metadata.'
 authors:
   - name: Delft University of Technology
-title: 'MUDE assignment 2025-2026: PA 1.1'
+title: 'MUDE assignment 2025-2026: PA 2.3'
 preferred-citation:
   type: generic
   authors:
   - family-names: Lanzafame
     given-names: Robert
   - name: Delft University of Technology
-  url: 'https://github.com/MUDE-2025/PA1.1' 
-  title: 'MUDE assignment 2025-2026: PA 1.1'
+  url: 'https://github.com/MUDE-2025/PA2.3' 
+  title: 'MUDE assignment 2025-2026: PA 2.3'
   license: CC-BY-4.0
   license-url: 'https://creativecommons.org/licenses/by/4.0/'
   languages:

@@ -13,12 +13,14 @@ In this assignment you'll make exercises on:
 1. [Iterable objects](./1_iter.ipynb)
 2. [Modulo](./2_modulo.ipynb)
 3. [Stem plots](./3_stem_plots.ipynb)
+4. [Errors](.4_errors.ipynb)
 
-You'll need to have done this to be able to make the workshop and group assignment.
+You'll need to have done 1-3 to be able to make the workshop and group assignment.
 
 You pass this PA if you:
 - Correct output for task 1.4
 - The notebook for exercise 3 runs without errors
 - Figure from task 3.2 added to this repository
+- The notebook for exercise 4 runs without errors
 
-> By Robert Lanzafame, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
+> By Robert Lanzafame and Jialei Ding, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).

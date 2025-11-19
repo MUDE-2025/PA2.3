@@ -8,6 +8,8 @@ preferred-citation:
   authors:
   - family-names: Lanzafame
     given-names: Robert
+  - family-names: Ding
+    given-names: Jialei
   - name: Delft University of Technology
   url: 'https://github.com/MUDE-2025/PA2.3' 
   title: 'MUDE assignment 2025-2026: PA 2.3'

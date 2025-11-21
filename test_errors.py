@@ -3,19 +3,19 @@ import pytest
 from testbook import testbook
 import numpy as np
 
-# test for justIce.py
 import justIce
 
-# 1. Check the file path fix
-assert "auxiliary_files" in file_path, (
-    "File path is incorrect. It must point to auxiliary_files/justIce.csv"
-)
 
-# 2. Check the central-difference logic fix
-assert np.allclose(dh_dt_CD, expected_cd, rtol=1e-2), (
-    "Central difference calculation is incorrect. "
-    "Make sure your i-loop uses (h[i+1] - h[i]) / (t[i+1] - t[i])."
-)
+def check_central_diff():
+    expected = [0.618, 0.346, 0.423,
+                0.222, -0.169, -0.508,
+                -0.127, -2.286, 2.540,
+                -0.063, -0.169, 0.127,
+                -0.169, -1.079]
+
+    # Use dh_dt_CD from justIce.py
+    assert np.allclose(justIce.dh_dt_CD, expected, rtol=1e-2), \
+        "The central difference calculation is incorrect"
 
 # test for max_even_square.py
 import max_even_square

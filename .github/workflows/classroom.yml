@@ -23,7 +23,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Check iter
-        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel pip sympy
+        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel
         command: |
           if grep -q "Team green has 5 points." 1_iter.ipynb && \
                   grep -q "Team red has 9 points." 1_iter.ipynb && \
@@ -40,7 +40,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Check notebook
-        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel pip sympy
+        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel
         command: |
           if [ -f "my_earthquake.svg" ]; then
             rm my_earthquake.svg
@@ -65,11 +65,30 @@ jobs:
           fi
         timeout: 10
         max-score: 10
+    - name: Check 4_errors notebook
+      id: check-4-errors
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Check 4_errors notebook
+        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel
+        command: |
+          jupyter nbconvert --execute 4_errors.ipynb --to notebook --inplace
+        timeout: 10
+        max-score: 10
+    - name: Check test_errors script
+      id: check-test-errors
+      uses: classroom-resources/autograding-python-grader@v1
+      with:
+        timeout: 10
+        max-score: 10
+        setup-command: pip install numpy matplotlib pandas os
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         CHECK-ITER_RESULTS: "${{steps.check-iter.outputs.result}}"
         CHECK-NOTEBOOK_RESULTS: "${{steps.check-notebook.outputs.result}}"
         CHECK-SVG_RESULTS: "${{steps.check-svg.outputs.result}}"
+        CHECK-4-ERRORS_RESULTS: "${{steps.check-4-errors.outputs.result}}"
+        CHECK-TEST-ERRORS_RESULTS: "${{steps.check-test-errors.outputs.result}}"
       with:
-        runners: check-iter, check-notebook, check-svg
+        runners: check-iter, check-notebook, check-svg, check-4-errors, check-test-errors

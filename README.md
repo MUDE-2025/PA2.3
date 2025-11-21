@@ -22,5 +22,6 @@ You pass this PA if you:
 - The notebook for exercise 3 runs without errors
 - Figure from task 3.2 added to this repository
 - The notebook for exercise 4 runs without errors
+- The py files for task ... don't raise errors when run
 
 > By Robert Lanzafame and Jialei Ding, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).

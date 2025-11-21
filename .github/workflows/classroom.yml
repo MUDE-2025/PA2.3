@@ -23,7 +23,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Check iter
-        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel pip sympy
+        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel
         command: |
           if grep -q "Team green has 5 points." 1_iter.ipynb && \
                   grep -q "Team red has 9 points." 1_iter.ipynb && \
@@ -40,7 +40,7 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Check notebook
-        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel pip sympy
+        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel
         command: |
           if [ -f "my_earthquake.svg" ]; then
             rm my_earthquake.svg
@@ -70,21 +70,18 @@ jobs:
       uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: Check 4_errors notebook
-        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel pip sympy
+        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel
         command: |
           jupyter nbconvert --execute 4_errors.ipynb --to notebook --inplace
         timeout: 10
         max-score: 10
     - name: Check test_errors script
       id: check-test-errors
-      uses: classroom-resources/autograding-command-grader@v1
+      uses: classroom-resources/autograding-python-grader@v1
       with:
-        test-name: Check test_errors script
-        setup-command: pip install numpy scipy pandas matplotlib jupyter ipykernel pip sympy
-        command: |
-          python test_errors.py
         timeout: 10
         max-score: 10
+        setup-command: pip install numpy matplotlib pandas os
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:

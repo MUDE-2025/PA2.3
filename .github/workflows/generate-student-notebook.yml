@@ -238,6 +238,10 @@ jobs:
             git commit -m "Generate solution version"
             git rm .github/workflows/generate-student-notebook.yml
             git rm requirements.txt
+            git rm max_even_square.py
+            git mv justIce_solution.py justIce.py
+            git rm justIce.py
+            git mv justIce_solution.py justIce.py
             git add .
             git commit -m "Remove requirements and workflow file from solution branch"
             git push origin solution --force

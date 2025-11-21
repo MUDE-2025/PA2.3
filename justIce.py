@@ -6,6 +6,18 @@ import os
 # This code reads the ice thickness data from a CSV file, computes the growth rate using
 # finite difference methods, and plots the results.
 
+from urllib.request import urlretrieve
+
+def findfile(fname):
+    filepath = os.path.join('auxiliary_files', fname)
+    if not os.path.isfile(filepath):
+        os.makedirs('auxiliary_files', exist_ok=True)
+        print(f"Downloading {fname}...")
+        urlretrieve('https://github.com/TUDelft-MUDE/source-files/raw/main/file/'+fname, filepath)
+
+findfile('justIce.csv')
+findfile('numbers.csv')
+
 # Load data
 file_path = os.path.join(os.path.dirname(__file__),
                          'auxiliary_files/justIce.csv')

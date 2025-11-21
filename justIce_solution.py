@@ -3,6 +3,17 @@ import numpy as np
 import matplotlib.pylab as plt
 import pandas as pd
 import os
+from urllib.request import urlretrieve
+
+def findfile(fname):
+    filepath = os.path.join('auxiliary_files', fname)
+    if not os.path.isfile(filepath):
+        os.makedirs('auxiliary_files', exist_ok=True)
+        print(f"Downloading {fname}...")
+        urlretrieve('https://github.com/TUDelft-MUDE/source-files/raw/main/file/'+fname, filepath)
+
+findfile('justIce.csv')
+findfile('numbers.csv')
 
 ## FILE PATHS ##
 # The first line is to make sure Python knows how to

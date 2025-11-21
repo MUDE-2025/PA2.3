@@ -1,19 +1,33 @@
+# This solution is taken from PA 1.6 from MUDE 2024
+
+## IMPORTS ##
 import numpy as np
 import matplotlib.pylab as plt
 import pandas as pd
 import os
 
-# This code reads the ice thickness data from a CSV file, computes the growth rate using
-# finite difference methods, and plots the results.
+# This script is an excerpt from GA 1.4.
+# There are two errors in this script. One is a logical error
+# and the other is not. You will need to look at the figures 
+# to identify the logical error, which is associated with the
+# central difference calculation. The assert statement at the
+# end will also check the values are correct. You may have to
+# close the figure before the script runs until the end.
 
-# Load data
+## FILE PATHS ##
+# The first line is to make sure Python knows how to
+# find files relative to the location of your script
 file_path = os.path.join(os.path.dirname(__file__),
-                         'auxiliary_files/justIce.csv')
+                         'justIce.csv')
+
+# SOLUTION:
+# file_path = os.path.join(os.path.dirname(__file__),
+#                          'auxiliary_files/justIce.csv')
 
 data = pd.read_csv(filepath_or_buffer=file_path, index_col=0)
 data.index = pd.to_datetime(data.index, format="%Y-%m-%d")
 
-# Data analysis
+## DATA ANALYSIS ##
 data_2021 = data.loc['2021']
 h_ice = (data_2021.to_numpy()).ravel()
 t_days = ((data_2021.index - data_2021.index[0]).days).to_numpy()
@@ -21,7 +35,11 @@ dh_dt_FD = (h_ice[1:]-h_ice[:-1])/(t_days[1:]-t_days[:-1])
 dh_dt_BD = (h_ice[1:]-h_ice[:-1])/(t_days[1:]-t_days[:-1]) 
 dh_dt_CD = [(h_ice[i+1] - h_ice[i-1]) / (t_days[i+1] - t_days[i-1]) for i in range(0, len(t_days)-1)]
 
-# Plotting
+# SOLUTION:
+dh_dt_CD = [(h_ice[i+1] - h_ice[i]) / (t_days[i+1] - t_days[i]) for i in range(0, len(t_days)-1)]
+
+
+## PLOTTING ##
 fig, ax1 = plt.subplots(figsize=(15,4))
 ax1.scatter(t_days[:-1], dh_dt_FD,
             color='blue', marker='o', label='dh_dt_FE Forward Difference')

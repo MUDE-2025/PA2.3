@@ -3,10 +3,6 @@ import pytest
 from testbook import testbook
 import numpy as np
 
-# check notebook for errors
-
-
-
 # test for justIce.py
 import justIce
 

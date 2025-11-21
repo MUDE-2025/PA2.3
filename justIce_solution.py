@@ -13,7 +13,6 @@ def findfile(fname):
         urlretrieve('https://github.com/TUDelft-MUDE/source-files/raw/main/file/'+fname, filepath)
 
 findfile('justIce.csv')
-findfile('numbers.csv')
 
 ## FILE PATHS ##
 # The first line is to make sure Python knows how to

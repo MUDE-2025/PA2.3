@@ -16,7 +16,6 @@ def findfile(fname):
         urlretrieve('https://github.com/TUDelft-MUDE/source-files/raw/main/file/'+fname, filepath)
 
 findfile('justIce.csv')
-findfile('numbers.csv')
 
 # Load data
 file_path = os.path.join(os.path.dirname(__file__),

@@ -1,4 +1,4 @@
-# Programming assignment 2.3
+# Programming assignment 2.3: PyOops
 
 *Due: Friday, November 28th.*
 

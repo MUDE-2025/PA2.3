@@ -1,6 +1,6 @@
 # Programming assignment 2.3: PyOops
 
-*Due: Friday, November 28th.*
+*Due: Sunday, November 30th.*
 
 You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/PA2.3/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/PA2.3/README.html. You can obtain your personal repository for submission on: https://classroom.github.com/a/AMlGdP2w.
 

@@ -7,13 +7,6 @@ You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/as
 Before you can start this assignment, read the theory pages in the book chapter [Errors in Python](https://mude.citg.tudelft.nl/book/2025/programming/week_2_3.html):
 - [Error types](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TUDelft-books_learn-python/2025/book/errors/error_types.html)
 - [The Python traceback](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TUDelft-books_learn-python/2025/book/errors/error_types.html)
-*
-
-You can preview this assignment on https://mude.citg.tudelft.nl/workbook-2025/assignments/PA2.3/README.html. After the deadline, this link will include solutions. The preview of the assignment version is shared here: https://mude.citg.tudelft.nl/workbook-2025/no_solutions/assignments/PA2.3/README.html. You can obtain your personal repository for submission on: https://classroom.github.com/a/AMlGdP2w.
-
-Before you can start this assignment, read the theory pages in the book chapter [Errors in Python](https://mude.citg.tudelft.nl/book/2025/programming/week_2_3.html):
-- [Error types](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TUDelft-books_learn-python/2025/book/errors/error_types.html)
-- [The Python traceback](https://mude.citg.tudelft.nl/book/2025/_git/github.com_TUDelft-books_learn-python/2025/book/errors/error_types.html)
 
 In this assignment you'll make exercises on:
 
